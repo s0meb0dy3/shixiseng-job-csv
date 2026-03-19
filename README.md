@@ -1,6 +1,6 @@
 # shixiseng-job-csv
 
-从[实习僧](https://www.shixiseng.com)爬取招聘信息并导出为 CSV 文件的 Claude Skill。
+从[实习僧](https://www.shixiseng.com)爬取招聘信息并导出为 CSV 文件的 Skill，适用于 Claude Code、Codex 等 AI 编程工具。
 
 ## 功能
 
@@ -49,21 +49,15 @@ agent-browser close                     # 关闭浏览器
 
 更多用法请参考 [agent-browser 官方仓库](https://github.com/vercel-labs/agent-browser)。
 
-### Python 3.x
-
-用于运行导出脚本，macOS 和 Linux 通常已预装。
 
 ## 安装方式
 
-### 方式一：直接安装 .skill 文件（推荐）
+### 方式一：复制 GitHub 网址给 AI（推荐）
 
-1. 下载 `shixiseng-job-csv.skill`
-2. 放到 `~/.claude/skills/` 目录下
+直接复制以下网址发送给 AI，让 AI 自动安装：
 
-```bash
-# 或通过 Claude Code 安装
-mkdir -p ~/.claude/skills
-cp shixiseng-job-csv.skill ~/.claude/skills/
+```
+https://github.com/s0meb0dy3/shixiseng-job-csv
 ```
 
 ### 方式二：从源码安装
@@ -72,15 +66,25 @@ cp shixiseng-job-csv.skill ~/.claude/skills/
 git clone https://github.com/s0meb0dy3/shixiseng-job-csv.git ~/.claude/skills/shixiseng-job-csv
 ```
 
+### 方式三：直接安装 .skill 文件
+
+1. 下载 `shixiseng-job-csv.skill`
+2. 放到 `~/.claude/skills/` 目录下
+
+```bash
+mkdir -p ~/.claude/skills
+cp shixiseng-job-csv.skill ~/.claude/skills/
+```
+
 ## 使用方法
 
-在 Claude Code 中触发：
+向 AI 发送请求即可触发：
 
 ```
 帮我爬取实习僧上"LLM算法"相关的实习职位，导出为 CSV
 ```
 
-Claude 会自动：
+AI 会自动：
 1. 打开实习僧搜索页
 2. 收集职位详情链接
 3. 翻页收集（默认 3 页）
