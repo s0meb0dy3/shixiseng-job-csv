@@ -10,8 +10,48 @@
 
 ## 前置依赖
 
-- [agent-browser](https://github.com/anthropics/agent-browser) - 浏览器自动化工具，需安装在 PATH 中
-- Python 3.x - 用于运行导出脚本
+### agent-browser
+
+浏览器自动化 CLI 工具，由 Vercel Labs 开发，专为 AI Agents 设计。
+
+**安装方式**（任选其一）：
+
+```bash
+# 方式一：npm 全局安装（推荐）
+npm install -g agent-browser
+
+# 方式二：Homebrew（macOS）
+brew install agent-browser
+
+# 方式三：Cargo（Rust）
+cargo install agent-browser
+
+# 方式四：项目本地安装
+npm install agent-browser
+```
+
+安装完成后，还需下载 Chrome 浏览器：
+
+```bash
+agent-browser install
+```
+
+**基本用法**：
+
+```bash
+agent-browser open example.com          # 打开网页
+agent-browser snapshot                  # 获取页面结构和元素引用
+agent-browser click @e2                 # 点击元素
+agent-browser fill @e3 "内容"           # 填写输入框
+agent-browser screenshot page.png       # 截图
+agent-browser close                     # 关闭浏览器
+```
+
+更多用法请参考 [agent-browser 官方仓库](https://github.com/vercel-labs/agent-browser)。
+
+### Python 3.x
+
+用于运行导出脚本，macOS 和 Linux 通常已预装。
 
 ## 安装方式
 
